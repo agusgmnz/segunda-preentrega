@@ -1,27 +1,19 @@
+var monto = parseInt(prompt("Ingrese el monto:"));
+var plazo = parseInt(prompt("Ingrese el plazo en meses:"));
 
-var montoPrestamo = parseFloat(prompt("Ingrese el monto del préstamo:"));
+var cuotaMensual = monto / plazo;
 
+var cuotas = [];
 
-var tasaInteresAnual = parseFloat(
-  prompt("Ingrese la tasa de interés anual (%):")
-);
+for (var i = 1; i <= plazo; i++) {
+  cuotas.push(cuotaMensual);
+}
 
+console.log("Monto: $" + monto);
+console.log("Plazo: " + plazo + " meses");
+console.log("Cuota mensual: $" + cuotaMensual.toFixed(2));
+console.log("Detalles de las cuotas:");
 
-var numeroCuotas = parseInt(prompt("Ingrese el número de cuotas:"));
-
-
-var tasaInteresMensual = tasaInteresAnual / 100 / 12;
-
-
-var cuotaMensual =
-  (montoPrestamo * tasaInteresMensual) /
-  (1 - Math.pow(1 + tasaInteresMensual, -numeroCuotas));
-
-
-var totalPagar = cuotaMensual * numeroCuotas;
-
-
-prompt("Monto del préstamo: $" + montoPrestamo.toFixed(2));
-prompt("Número de cuotas a pagar: " + numeroCuotas);
-prompt("Total de la cuota mensual: $" + cuotaMensual.toFixed(2));
-prompt("Total a pagar: $" + totalPagar.toFixed(2));
+for (var j = 0; j < cuotas.length; j++) {
+  console.log("Cuota " + (j + 1) + ": $" + cuotas[j].toFixed(2));
+}
