@@ -21,7 +21,7 @@ var cuotaMensual =
 var totalPagar = cuotaMensual * numeroCuotas;
 
 
-alert("Monto del préstamo: $" + montoPrestamo.toFixed(2));
-alert("Número de cuotas a pagar: " + numeroCuotas);
-alert("Total de la cuota mensual: $" + cuotaMensual.toFixed(2));
-alert("Total a pagar: $" + totalPagar.toFixed(2));
+prompt("Monto del préstamo: $" + montoPrestamo.toFixed(2));
+prompt("Número de cuotas a pagar: " + numeroCuotas);
+prompt("Total de la cuota mensual: $" + cuotaMensual.toFixed(2));
+prompt("Total a pagar: $" + totalPagar.toFixed(2));
